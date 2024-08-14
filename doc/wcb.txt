@@ -11,7 +11,7 @@ Given a comment block like:
   # That spans multiple
   # lines when it is properly wrapped.  This line is way too long long long long long.
 <
-Typing `\cw` will wrap the text to:
+Typing `\wc` will wrap the text to:
 >
   # This is a badly wrapped comment.  That spans multiple lines when it is
   # properly wrapped.  This line is way too long long long long long.
@@ -25,16 +25,16 @@ This is a standard vim plugin, please follow the instructions of your plugin
 manager to install.
 
 =============================================================================
-Usage                                              *\cw* *wcb#WrapCommentBlock()*
+Usage                                              *\wc* *wcb#WrapCommentBlock()*
 
-- `\cw` wraps the comment block the cursor is currently in.
+- `\wc` wraps the comment block the cursor is currently in.
 - `call wcb#WrapCommentBlock()` to wrap the comment block the cursor is
   currently in.
 
 =============================================================================
 Mappings
 
-`\cw` => calls `wcb#WrapCommentBlock()` to wrap the comment block the cursor
+`\wc` => calls `wcb#WrapCommentBlock()` to wrap the comment block the cursor
 is currently in.
 
 =============================================================================
