@@ -1,0 +1,73 @@
+*wcb.txt* Plugin for wrapping comment blocks.
+
+=============================================================================
+Introduction
+
+Given a comment block like:
+>
+  # This is
+  #   a badly
+  # wrapped comment.
+  # That spans multiple
+  # lines when it is properly wrapped.  This line is way too long long long long long.
+<
+Typing `\cw` will wrap the text to:
+>
+  # This is a badly wrapped comment.  That spans multiple lines when it is
+  # properly wrapped.  This line is way too long long long long long.
+<
+It is equivalent to visually selecting the lines and using |gqgq|.
+
+=============================================================================
+Installation
+
+This is a standard vim plugin, please follow the instructions of your plugin
+manager to install.
+
+=============================================================================
+Usage                                              *\cw* *wcb#WrapCommentBlock()*
+
+- `\cw` wraps the comment block the cursor is currently in.
+- `call wcb#WrapCommentBlock()` to wrap the comment block the cursor is
+  currently in.
+
+=============================================================================
+Mappings
+
+`\cw` => calls `wcb#WrapCommentBlock()` to wrap the comment block the cursor
+is currently in.
+
+=============================================================================
+Configuration                     *g:wcb_disable_mappings* *wcb_disable_mappings*
+
+To disable mappings:
+>
+ let g:wcb_disable_mappings = 1
+<
+=============================================================================
+License
+
+Licensed under the Apache 2.0 licence, see the LICENSE file included in the
+repository.
+
+=============================================================================
+Bugs
+
+None known.
+
+=============================================================================
+Contributing
+
+Contributions are welcome :)  Please open an issue or send a pull request.
+
+=============================================================================
+Changelog
+
+Version 1.0.0: initial release.
+
+=============================================================================
+Credits
+
+Written by John Tobin <johntobin@johntobin.ie>
+
+vim:tw=78:sw=2:ts=2:ft=help:norl:nowrap:
