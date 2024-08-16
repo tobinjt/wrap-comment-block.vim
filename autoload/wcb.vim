@@ -53,8 +53,11 @@ function! wcb#WrapCommentBlock()
 
   call cursor(l:start_line, len(getline(l:start_line)))
   if l:end_line > l:start_line
-    " There's no point in wrapping if the comment is a single line.
     execute 'normal! ' . (l:end_line - l:start_line) . 'gqgq'
+  else
+    " Wrap single lines in case they are long and should be wrapped to multiple
+    " lines.
+    execute 'normal! gqgq'
   endif
 endfunction
 
