@@ -52,12 +52,6 @@ function! wcb#WrapCommentBlock()
   let l:end_line = wcb#FindEndOfBlock(line('.'), l:syn_id)
 
   call cursor(l:start_line, len(getline(l:start_line)))
-  if l:end_line > l:start_line
-    execute 'normal! ' . (l:end_line - l:start_line) . 'gqgq'
-  else
-    " Wrap single lines in case they are long and should be wrapped to multiple
-    " lines.
-    execute 'normal! gqgq'
-  endif
+  execute 'normal! ' . (1 + l:end_line - l:start_line) . 'gqgq'
 endfunction
 
